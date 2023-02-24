@@ -1,0 +1,99 @@
+/* - Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6) */
+:root{
+    --cor1: hsl(233, 47%, 7%);
+    --cor2: hsl(244, 38%, 16%);
+    --cor3: hsl(277, 64%, 61%);
+    --cor4: hsl(0, 0%, 100%);
+    --cor5: hsla(0, 0%, 100%, 0.75);
+    --cor6: hsla(0, 0%, 100%, 0.6);
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+*{
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+body{
+    background-color: var(--cor1);
+}
+.container{
+    width: 1000px;
+    height: 400px;
+    background-color: var(--cor2);
+    margin: 120px auto;
+    border-radius: 10px;
+}
+.content-img{
+    width: 500px;
+    height: 400px;
+    float: right;
+    background:
+    linear-gradient(rgba(170, 92, 219,.2),rgba(170, 92, 219,.2)
+    ), url(images/image-header-desktop.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 0 10px 10px 0;
+}
+.content{
+    padding: 40px;
+    text-align: left;
+}
+.content-cont p{
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 25px;
+}
+.color-text{
+    color: var(--cor6);
+    font-family: "Lexend Deca", sans-serif;
+}
+.content-text{
+    margin-right: 70px;
+    text-transform: uppercase;
+}
+.content-info{
+    display:flex;
+    position: relative;
+    bottom: 80px;
+    float: left;
+    justify-content: space-around;
+}
+.attribution{
+    text-align: center;
+    letter-spacing: 1px;
+}
+.attribution a{
+    text-decoration: none;
+    color: var(--cor3);
+}
+
+@media (max-width: 925px){
+    .container{
+        width: 400px;
+        height: 1000px;
+    }
+    .content-img{
+        width: 400px;
+        height: 300px;
+        background:
+        linear-gradient(rgba(170, 92, 219,.2),rgba(170, 92, 219,.2)
+        ), url(images/image-header-mobile.jpg) no-repeat;
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 20px;
+    }
+    .content-info{
+        display: block;
+        text-align: center;
+        left: 110px;
+        bottom: -140px;
+    }
+    .content-text{
+        margin-bottom: 60px;
+    }
+}
